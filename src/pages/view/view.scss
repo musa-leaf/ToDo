@@ -1,0 +1,32 @@
+page-view {
+    #data{
+        width: calc(100% - 25px);
+        float: left;
+
+        #note{
+           
+           p{
+                white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+                word-wrap: break-word; /* IE */
+                word-break: break-all;
+                
+           }
+            
+        }
+    }
+    #status{
+        width: 25px;
+        text-align: center;
+        #done{
+            color: #4caf50;
+            margin-right: 15px;
+            font-size: 25px;
+        }
+    
+        #undone{
+            color: #ff5722;
+            margin-right: 15px;
+            font-size: 25px;
+        }
+    }
+}

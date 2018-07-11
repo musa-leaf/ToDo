@@ -1,0 +1,45 @@
+<!--
+  Generated template for the ViewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>View Items</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ 
+  <ion-list>
+    <ion-list-header>
+      things to do...
+    </ion-list-header>
+    <ion-item *ngFor = "let item of items">
+      
+      <div id="data">
+          <ion-card>
+
+            <ion-card-header>
+              {{item.title}} |<small> {{item.myDate}} </small>
+            </ion-card-header>
+          
+            <ion-card-content id = "note">
+             <p> {{item.note}}</p>
+            </ion-card-content>
+          
+          </ion-card>
+      </div>
+
+      <div id="status">
+        <ion-icon id = "done" name="checkmark-circle" *ngIf = "item.done == true"></ion-icon>
+        <ion-icon id = "undone" name="close-circle" *ngIf = "item.done == false"></ion-icon>
+      </div>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

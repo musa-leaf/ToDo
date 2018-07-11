@@ -1,0 +1,60 @@
+page-splash {
+    #splash{
+        background: #606c94;
+        color: #cac0dd;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        h3{
+            font-size: 1em;
+            letter-spacing: 15px;
+            text-align: center;
+            padding-left: 15px;
+            animation: fade 2s ease;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        .icon{
+            display: block;
+            padding: 2px 14px;
+            font-size: 100px;
+            margin: 5px;
+            animation: splash 2s ease;
+            border-radius: 2px;
+            -webkit-border-radius: 2px;
+            
+        }
+    }
+
+    @keyframes fade {
+
+        50%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    @keyframes splash {
+        
+        0%{
+            -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+        }
+
+        100%{
+            -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+            color: #cac0dd;
+        }
+    }
+}
