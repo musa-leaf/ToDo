@@ -14,32 +14,26 @@
 
 
 <ion-content padding>
- 
   <ion-list>
     <ion-list-header>
-      things to do...
+      THINGS TO DO
     </ion-list-header>
-    <ion-item *ngFor = "let item of items">
-      
-      <div id="data">
-          <ion-card>
-
-            <ion-card-header>
-              {{item.title}} |<small> {{item.myDate}} </small>
-            </ion-card-header>
-          
-            <ion-card-content id = "note">
-             <p> {{item.note}}</p>
-            </ion-card-content>
-          
-          </ion-card>
-      </div>
-
-      <div id="status">
-        <ion-icon id = "done" name="checkmark-circle" *ngIf = "item.done == true"></ion-icon>
-        <ion-icon id = "undone" name="close-circle" *ngIf = "item.done == false"></ion-icon>
-      </div>
-
-    </ion-item>
+    <ion-item-sliding   *ngFor = "let item of items; let x = index">
+      <ion-item>
+        <h2> {{item.title}} |<small> {{item.myDate}} </small></h2>
+        <p>{{item.note}}</p>
+        
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button (click) = "delete(x)">
+          <ion-icon name="trash" class = "icon"></ion-icon>DELETE
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
   </ion-list>
+  
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click) = "goToAdd()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
 </ion-content>

@@ -1,32 +1,21 @@
 page-view {
-    #data{
-        width: calc(100% - 25px);
-        float: left;
+    p{
+        white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+        word-wrap: break-word; /* IE */
+        word-break: break-all;
+    }
+    h2{
+        padding: 10px 0;
+        letter-spacing: 3px;
 
-        #note{
-           
-           p{
-                white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
-                word-wrap: break-word; /* IE */
-                word-break: break-all;
-                
-           }
+        small{
+            color: #606c94;
             
         }
     }
-    #status{
-        width: 25px;
+    .rb{
+        display: block;
         text-align: center;
-        #done{
-            color: #4caf50;
-            margin-right: 15px;
-            font-size: 25px;
-        }
-    
-        #undone{
-            color: #ff5722;
-            margin-right: 15px;
-            font-size: 25px;
-        }
+
     }
 }

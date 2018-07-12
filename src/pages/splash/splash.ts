@@ -17,15 +17,10 @@ export class SplashPage {
       x => {
         if(x == 1){
           this.timer.unsubscribe();
-          this.navCtrl.setRoot("HomePage");
+          this.navCtrl.setRoot("ViewPage");
         }
       }
     );
-  }
-
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SplashPage');
   }
 
 }

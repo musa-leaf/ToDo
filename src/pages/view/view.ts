@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TODOLIST } from '../../mocks/todo.mocks';
+import { ToastController } from 'ionic-angular';
+
 
 /**
  * Generated class for the ViewPage page.
@@ -15,7 +17,6 @@ import { TODOLIST } from '../../mocks/todo.mocks';
   templateUrl: 'view.html',
 })
 export class ViewPage {
-
   
   items : any = TODOLIST;
   title : string;
@@ -23,26 +24,42 @@ export class ViewPage {
   myDate : string;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
     this.title = navParams.get("title");
     this.note = navParams.get("note");
     this.myDate = navParams.get("myDate");
 
     if(this.note != "" && this.note != undefined){
-      this.items.push({
+      TODOLIST.push({
         title : this.title,
         note : this.note,
         myDate : this.myDate,
         done : false
       
-      }); 
+      });
+      this.presentToast("data  added sucessfully"); 
     }
-
-    this.items.reverse();
+    
+    TODOLIST.reverse();
   }
 
-  ionViewDidLoad() {
-    console.log(this.items);
+  //add item
+  goToAdd(){
+    this.navCtrl.push("HomePage");
+  }
+
+  //delete item
+  delete(arg){
+    console.log(arg);
+    TODOLIST.splice(arg,1);
+  }
+
+  presentToast(message) {
+    const toast = this.toastCtrl.create({
+      message: message,
+      duration: 1500
+    });
+    toast.present();
   }
 
 }

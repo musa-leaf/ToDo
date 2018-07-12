@@ -12,9 +12,12 @@
 
 </ion-header>
   
-
-
 <ion-content padding id = "home">
+  <ion-refresher  (ionRefresh) =  "refreshScreen($event);">
+    <ion-refresher-content refreshingSpinner = "circles">
+      
+    </ion-refresher-content>
+  </ion-refresher>
   <ion-list>
     <ion-item>  
         <ion-label color="primary" floating>Title</ion-label>

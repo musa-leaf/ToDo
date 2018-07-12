@@ -36,7 +36,7 @@ page-splash {
 
     @keyframes fade {
 
-        50%{
+        0%{
             opacity: 0;
         }
         100%{
@@ -54,7 +54,6 @@ page-splash {
         100%{
             -webkit-transform: rotateX(0deg);
             transform: rotateX(0deg);
-            color: #cac0dd;
         }
     }
 }

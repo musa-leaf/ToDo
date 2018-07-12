@@ -1,6 +1,6 @@
 const ToDoList : ToDoItem [] = [
     {
-        title: "School stuff",
+        title: "School",
         note : "study for exams",
         myDate : "2018-07-22",
         done : false,
@@ -13,8 +13,8 @@ const ToDoList : ToDoItem [] = [
     },
 
     {
-        title: "Wrap",
-        note : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat expedita, molestiae aperiam et ipsam nulla omnis sapiente dicta, non praesentium. Voluptates ex laborum facere at, dolor fugit optio labore!",
+        title: "Project",
+        note : "Lorem ipsum dolor sit amet labore!",
         myDate : "2018-07-31",
         done : true,
     },
